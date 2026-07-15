@@ -1,50 +1,54 @@
-*{
+* {
     margin: 0%;
     padding: 0%;
 }
 
 
 * {
-  font-family: "Google Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight:400;
-  font-style: normal;
-  font-variation-settings:
-    "GRAD" 0;
+    font-family: "Google Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "GRAD" 0;
 }
 
-.parent{
+.parent {
     height: 75px;
+    background-color: white;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
 }
 
-#logo{
+#logo {
     padding-left: 3vw;
     width: 200px;
 }
 
-.child{
+.child {
     display: flex;
     gap: 20px;
     align-items: center;
 }
 
-.navitem{
+.navitem {
     display: flex;
     gap: 20px;
     list-style: none;
     color: green;
-    
+
 }
 
-.navlist a{
+.navlist a {
     text-decoration: none;
     color: green;
 }
 
-.parent button{
+.parent button {
     padding: 10px 15px;
     margin-right: 50px;
     background-color: green;
@@ -53,90 +57,109 @@
     color: white;
 }
 
-.btn:hover{
+.btn:hover {
     box-shadow: 2px 2px 2px rgb(126, 124, 124);
     background-color: rgb(3, 98, 3);
 }
 
-.line{
+.line {
     height: 3px;
     width: 50px;
     background-color: rgb(237, 180, 4);
     border-radius: 100px;
 }
 
+#menusec{
+    width: 20px;
+    display: none;
+}
 
 
 /* body section */
 
-.body1 img{
+.body1 img {
+    margin-top: 75px;
     width: 100%;
     height: 100%;
 }
 
-/* footer section */
-.masterfooter{
-     background-color: rgb(0, 137, 56);
+#mobilephoto {
+    display: none;
 }
-.mainfooter{
+
+.arrow{
+    width: 100px;
+    border: 1px solid black;
+    z-index: 1;
+}
+/* footer section */
+.masterfooter {
+    background-color: rgb(0, 137, 56);
+}
+
+.mainfooter {
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
-#footer1{
+
+#footer1 {
     padding-left: 20vw;
     padding-top: 50px;
     display: flex;
     gap: 10vw;
 }
 
-#footer1 div ul li{
+#footer1 div ul li {
     font-size: 18px;
     color: rgb(237, 180, 4);
     list-style: none;
 }
 
-#footer1 div ul li a{
+#footer1 div ul li a {
     font-size: 14px;
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
-#footer2{
+#footer2 {
     display: flex;
-    flex-direction: column ;
-    padding-right: 50px;
-    padding-top: 50px;
+    flex-direction: column;
+    padding-right: 3vw;
+    padding-top: 3vw;
 }
 
-#footer2 h4{
+#footer2 h4 {
     font-weight: 700;
     color: white;
 }
 
-#footer2 p{
+#footer2 p {
     color: rgb(237, 180, 4);
 }
 
-#line1{
+#line1 {
     height: 1.5px;
     width: 100%;
     background-color: white;
     margin: auto;
 }
-.lowersection{
+
+.lowersection {
     width: 80%;
     display: flex;
     flex-direction: column;
     gap: 20PX;
     margin: auto;
-    
+
 }
-.lowersection P{
+
+.lowersection P {
     font-size: 15PX;
 }
-.lowersection1{
+
+.lowersection1 {
     /* line-height: 40px; */
     color: white;
     padding-top: 30px;
@@ -150,14 +173,63 @@
 /* media query starting */
 
 
-@media (max-width:700px) {
-    .navitem{
+@media (max-width:900px) {
+    #logo {
+        width: 40vw;
+    }
+
+    .navitem {
         display: none;
     }
-    .btn{
+
+    .btn {
         display: none;
     }
-    .body1 img{
+
+    .body1 img {
         width: 100vw;
+        height: 100vh;
+    }
+
+    #footer1 div ul li {
+        font-size: 12px;
+    }
+
+    #footer1 div ul li a {
+        font-size: 8px;
+    }
+
+    .lowersection P {
+        font-size: 9px;
+    }
+
+    #footer2 h4 {
+        font-size: 9px;
+    }
+
+    #footer2 p {
+        font-size: 6px;
+    }
+
+    .mainfooter {
+        flex-direction: column;
+    }
+
+    #footer1 {
+        padding-left: 10vw;
+    }
+
+    #footer2 {
+        padding-left: 10vw;
+    }
+
+    #desktopphoto{
+        display: none;
+    }
+    #mobilephoto {
+        display: block;}
+    #menusec {
+        display: block;
+        padding-right: 20px;
     }
 }
