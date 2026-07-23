@@ -102,27 +102,30 @@ heroPrev.addEventListener("click", () => {
 
 
 
+const track = document.querySelector(".slider-track");
+const slides = document.querySelectorAll(".slider-track img");
+const dots = document.querySelectorAll(".slider-dots span");
 
-const swiper = new Swiper(".bannerSwiper", {
+let index = 0;
 
-    slidesPerView:1,
+function slideBanner(){
+    track.style.transform = `translateX(-${index * 100}%)`;
 
-    loop:true,
+    dots.forEach(dot=>dot.classList.remove("active"));
+    dots[index].classList.add("active");
+}
 
-    speed:600,
+setInterval(()=>{
+    index++;
 
-    navigation:{
-        nextEl:".swiper-button-next",
-    },
-
-    pagination:{
-        el:".swiper-pagination",
-        clickable:true,
-    },
-
-    autoplay:{
-        delay:3000,
-        disableOnInteraction:false,
+    if(index >= slides.length){
+        index = 0;
     }
 
-});
+    slideBanner();
+
+},3000);
+
+
+
+
